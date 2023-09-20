@@ -1,0 +1,41 @@
+*
+{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    text-decoration: none;
+}
+
+header
+{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 5% auto;
+    
+    & input
+    {
+        font-size: 1.5rem;
+    }
+    
+    & button
+    {
+        cursor: pointer;
+        width: 50%;
+        height: 40px;
+        margin: auto;
+        margin-top: 10px;
+    }
+}
+
+dialog
+{
+    border: none;
+    padding: 2rem;
+    border-radius: 15px;
+    width: 40%;
+    max-width: 85%;
+    margin: auto;
+    background-color: gray;
+    text-align: center;
+}
