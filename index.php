@@ -14,16 +14,35 @@
     <main>
         <!-- coloque isso na pagina 'todos-livros.php' e 'emprestados.php' -->
         <!-- <input id="pesquisar" type="text" onchange="" placeholder="Pesquisar"> -->
+        <?php
+            switch (@$_REQUEST["pagina"])
+            {
+                case "novo-livro":
+                    include("novo-livro.php");
+                    break;
 
-        <h2>Adicionar Livro</h2>
+                case "novo-aluno":
+                    include("novo-aluno.php");
+                    break;
 
-        <form action="">
-            <input type="text" placeholder="Nome do Livro" name="nome-livro" maxlength="100">
-            <input type="text" placeholder="Autor" name="autor" maxlength="50">
-            <textarea rows="5" cols="30" placeholder="Localização" name="local" maxlength="150"></textarea>
+                case "novo-emprestimo":
+                    include("novo-emprestimo.php");
+                    break;
+                
+                case "emprestados":
+                    include("emprestados.php");
+                    break;
 
-            <button type="submit">Cadastrar Livro</button>
-        </form>
+                case "todos-livros":
+                    include("todos-livros.php");
+                    break;
+                
+                default: // vá pra pagina de novo-livro quando a pagina for carregada no começo
+                    include("novo-livro.php");
+                    break;
+            }
+
+        ?>
     </main>
 </body>
 </html>
