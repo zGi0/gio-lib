@@ -12,8 +12,6 @@
     <?php include("assets/nav.php") ?>
     
     <main>
-        <!-- coloque isso na pagina 'todos-livros.php' e 'emprestados.php' -->
-        <!-- <input id="pesquisar" type="text" onchange="" placeholder="Pesquisar"> -->
         <?php
             switch (@$_REQUEST["pagina"])
             {
